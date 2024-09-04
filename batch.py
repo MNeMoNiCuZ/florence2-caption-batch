@@ -44,10 +44,10 @@ def download_and_load_model(model_name: str) -> Tuple[AutoModelForCausalLM, Auto
     model = torch.compile(model, mode="reduce-overhead")
     return model, processor
 
-def load_image_paths(folder_path: str) -> Iterator[Path]:
+def load_image_paths_recursive(folder_path: str) -> Iterator[Path]:
     valid_extensions = {".jpg", ".jpeg", ".png", ".bmp", ".gif", ".webp"}
     return (
-        path for path in Path(folder_path).iterdir()
+        path for path in Path(folder_path).rglob("*")
         if path.suffix.lower() in valid_extensions and (OVERWRITE or not path.with_suffix('.txt').exists())
     )
 
@@ -83,7 +83,8 @@ def run_model_batch(image_paths: List[Path], model: AutoModelForCausalLM, proces
     results = processor.batch_decode(generated_ids, skip_special_tokens=False)
     return [result.replace('</s>', '').replace('<s>', '').replace('<pad>', '') for result in results]
 
-def process_images(paths: Iterator[Path], model: AutoModelForCausalLM, processor: AutoProcessor, batch_size: int = 8) -> Tuple[int, float]:
+
+def process_images_recursive(paths: Iterator[Path], model: AutoModelForCausalLM, processor: AutoProcessor, batch_size: int = 8) -> Tuple[int, float]:
     start_time = time.time()
     total_images = 0
 
@@ -111,7 +112,7 @@ model, processor = download_and_load_model(model_name)
 
 # Process images in the /input/ folder
 folder_path = Path(__file__).parent / "input"
-total_images, total_time = process_images(load_image_paths(folder_path), model, processor, batch_size=BATCH_SIZE)
+total_images, total_time = process_images_recursive(load_image_paths_recursive(folder_path), model, processor, batch_size=BATCH_SIZE)
 
 print(f"Total images captioned: {total_images}")
 print(f"Total time taken: {total_time:.2f} seconds")
