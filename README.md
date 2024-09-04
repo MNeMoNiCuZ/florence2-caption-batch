@@ -17,7 +17,7 @@ It's a very fast and fairly robust captioning model that can produce good output
 3. Install [Pytorch for your version of CUDA](https://pytorch.org/). It's only been tested with version 12.1 but may work with others.
 4. Open `batch.py` in a text editor and change the BATCH_SIZE = 7 value to match the level of your GPU.
 
->   For a 10gb VRAM GPU, use 1.
+>   For a 6gb VRAM GPU, use 1.
   
 >   For a 24gb VRAM GPU, use 7.
 
