@@ -4,8 +4,12 @@ This tool uses the [VLM Florence2](https://huggingface.co/microsoft/Florence-2-l
 It's a very fast and fairly robust captioning model that can produce good outputs in 3 different levels of detail.
 
 ## Requirements
-Python 3.10 or above. It's been tested with 3.10, 3.11 and 3.12. It does not work with 3.8.
-Cuda 12.1. It may work with other versions. Untested.
+* Python 3.10 or above.
+  * It's been tested with 3.10, 3.11 and 3.12.
+  * It does not work with 3.8.
+
+* Cuda 12.1.
+  * It may work with other versions. Untested.
 
 ## Setup
 1. Create a virtual environment. Use the included `venv_create.bat` to automatically create it. Use python 3.10 or above.
