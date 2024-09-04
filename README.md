@@ -51,3 +51,6 @@ DETAIL_MODE = 3:
 ```
 The image shows a toy airplane flying above the clouds. The airplane is made of gray yarn and has two propellers on either side. It appears to be in mid-flight, with its wings spread wide and its nose pointing upwards. The clouds below are white and fluffy, and the sky is a light blue with a few wispy clouds. In the background, there is a body of water visible. The overall mood of the image is peaceful and serene.
 ```
+
+## Credits
+Thanks [Gökay Aydoğan](https://huggingface.co/gokaygokay) for helping me with the scripts.
