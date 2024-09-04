@@ -10,6 +10,8 @@ It's a very fast and fairly robust captioning model that can produce good output
 
 * Cuda 12.1.
   * It may work with other versions. Untested.
+ 
+To use CUDA / GPU speed captioning, you'll need ~6GB VRAM or more.
 
 ## Setup
 1. Create a virtual environment. Use the included `venv_create.bat` to automatically create it. Use python 3.10 or above.
