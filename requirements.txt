@@ -1,0 +1,6 @@
+timm
+transformers
+einops
+tqdm
+huggingface_hub
+pillow
