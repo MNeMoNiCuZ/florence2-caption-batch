@@ -16,7 +16,7 @@ torch.set_float32_matmul_precision("high")
 OVERWRITE = True  # Boolean option to allow overwriting existing caption files
 PREPEND_STRING = ""  # Prefix string to prepend to the generated caption
 APPEND_STRING = ""  # Suffix string to append to the generated caption
-BATCH_SIZE = 7 # How many images to process at one time. A 24gb VRAM 3090 can handle 7. A batch size of 1 requires 10gb VRAM.
+BATCH_SIZE = 7 # How many images to process at one time. A 24gb VRAM 3090 can handle 7. A 6gb VRAM GPU can handle a batch size of 1.
 PRINT_PROCESSING_STATUS = False  # Option to print processing status of images
 PRINT_CAPTIONS = False  # Option to print captions to the console
 DETAIL_MODE = 3 # The level of verbosity for the output caption.
