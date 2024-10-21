@@ -37,20 +37,14 @@ Here's an example:
 ![airplane 001](https://github.com/user-attachments/assets/61219c96-5ed1-4bb6-acee-17ddef62fe52)
 
 DETAIL_MODE = 1:
-```
-A toy airplane flying through the clouds in the sky.
-```
+> A toy airplane flying through the clouds in the sky.
 
 DETAIL_MODE = 2:
-```
-The image shows a toy airplane flying through the sky with white fluffy clouds in the background.
-```
+> The image shows a toy airplane flying through the sky with white fluffy clouds in the background.
 
 
 DETAIL_MODE = 3:
-```
-The image shows a toy airplane flying above the clouds. The airplane is made of gray yarn and has two propellers on either side. It appears to be in mid-flight, with its wings spread wide and its nose pointing upwards. The clouds below are white and fluffy, and the sky is a light blue with a few wispy clouds. In the background, there is a body of water visible. The overall mood of the image is peaceful and serene.
-```
+> The image shows a toy airplane flying above the clouds. The airplane is made of gray yarn and has two propellers on either side. It appears to be in mid-flight, with its wings spread wide and its nose pointing upwards. The clouds below are white and fluffy, and the sky is a light blue with a few wispy clouds. In the background, there is a body of water visible. The overall mood of the image is peaceful and serene.
 
 ## Credits
 Thanks [Gökay Aydoğan](https://huggingface.co/gokaygokay) for helping me with the scripts.
