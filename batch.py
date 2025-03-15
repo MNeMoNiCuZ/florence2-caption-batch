@@ -34,7 +34,7 @@ def download_and_load_model(model_name: str) -> Tuple[AutoModelForCausalLM, Auto
     model_path = Path("models") / model_name.replace('/', '_')
     if not model_path.exists():
         print(f"Downloading {model_name} model to: {model_path}")
-        snapshot_download(repo_id=model_name, local_dir=model_path, local_dir_use_symlinks=False)
+        snapshot_download(repo_id=model_name, local_dir=model_path)
 
     print(f"Loading model {model_name}...")
     with patch("transformers.dynamic_module_utils.get_imports", fixed_get_imports):
